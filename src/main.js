@@ -2,7 +2,6 @@ var Vue = require('vue/dist/vue.common.js');
 
 document.querySelector('body').append(document.createElement('div'))
 new Vue({
-    replace: false,
     template:'<editor v-model="content" lang="html" height="500" @init="initEditor"></editor>',
     data:{
         content:""
