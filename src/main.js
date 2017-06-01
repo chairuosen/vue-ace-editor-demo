@@ -1,19 +1,19 @@
-var Vue = require('vue');
+var Vue = require('vue/dist/vue.common.js');
 
+document.querySelector('body').append(document.createElement('div'))
 new Vue({
-    el:'body',
     replace: false,
-    template:'<editor :content.sync="content" lang="html" height="500"></editor>',
+    template:'<editor v-model="content" lang="html" height="500" @init="initEditor"></editor>',
     data:{
         content:""
     },
     components:{
-        editor:require('vue-ace-editor')
+        editor:require('vue2-ace-editor')
     },
-    events:{
-        'vue-ace-editor:init':function () {
+    methods:{
+        initEditor:function (editor) {
             require('brace/mode/html');
             require('brace/theme/chrome');
         }
     }
-});
+}).$mount('div');

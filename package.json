@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"webpack"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
   "devDependencies": {
     "brace": "^0.8.0",
     "html-webpack-plugin": "^2.22.0",
-    "vue": "^1.0.26",
-    "vue-ace-editor": "^1.0.2",
+    "vue": "^2.3.3",
+    "vue2-ace-editor": "0.0.3",
     "webpack": "^1.13.1"
   }
 }
