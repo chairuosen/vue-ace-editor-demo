@@ -21,7 +21,7 @@
     "brace": "^0.8.0",
     "html-webpack-plugin": "^2.22.0",
     "vue": "^2.3.3",
-    "vue2-ace-editor": "0.0.3",
+    "vue2-ace-editor": "^0.0.5",
     "webpack": "^1.13.1"
   }
 }
