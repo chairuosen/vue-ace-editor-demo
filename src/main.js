@@ -2,12 +2,16 @@ var Vue = require('vue/dist/vue.common.js');
 
 document.querySelector('body').append(document.createElement('div'))
 new Vue({
-    template:'<editor v-model="content" lang="html" height="500" @init="initEditor"></editor>',
+    template:'<div>123<editor v-model="content" lang="html" height="500" @init="initEditor"></editor></div>',
     data:{
         content:""
     },
     components:{
-        editor:require('vue2-ace-editor')
+        editor:function () {
+            return new Promise(function (resolve) {
+                require(['vue2-ace-editor'],resolve);
+            })
+        }
     },
     methods:{
         initEditor:function (editor) {
